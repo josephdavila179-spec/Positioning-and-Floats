@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team</title>
+    <style>
+        /* Basic page styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* 1. NAVIGATION BAR - Demonstrates 'position: sticky' */
+        nav {
+            position: sticky; /* Keeps nav bar fixed to top when scrolling */
+            top: 0;
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ff9900;
+        }
+
+        /* Header Title */
+        header {
+            text-align: center;
+            padding: 30px;
+            background-color: #e2e2e2;
+        }
+
+        /* Main Container */
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 30px auto;
+        }
+
+        /* 2. TEAM CARD - Demonstrates 'position: relative' */
+        .team-card {
+            position: relative; /* Container reference point for absolute positioning */
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Clearfix to make sure card wraps around floated images */
+        .team-card::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* 3. PROFILE IMAGES - Demonstrates 'float: left' */
+        .profile-img {
+            float: left; /* Floats the image left so the text wraps next to it */
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+
+        /* 4. ROLE BADGE - Demonstrates 'position: absolute' */
+        .badge {
+            position: absolute; /* Positions badge precisely relative to .team-card */
+            top: 15px;
+            right: 15px;
+            background-color: #ff9900;
+            color: white;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* Team member text styling */
+        .member-name {
+            margin-top: 0;
+            color: #222;
+        }
+
+        .member-role {
+            color: #777;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION SECTION -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- HEADER -->
+    <header id="home">
+        <h1>Meet Our Creative Team</h1>
+        <p>The awesome people behind our projects!</p>
+    </header>
+
+    <!-- TEAM SHOWCASE SECTION -->
+    <div class="container" id="team">
+
+        <!-- MEMBER 1 -->
+        <div class="team-card">
+            <span class="badge">Lead</span>
+            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=300&q=80" alt="Barnaby" class="profile-img">
+            <h2 class="member-name">Barnaby</h2>
+            <p class="member-role">Team Leader</p>
+            <p>Barnaby oversees all team operations. He loves guiding group projects, organizing meetings, and ensuring everyone stays happy and motivated throughout the day.</p>
+        </div>
+
+        <!-- MEMBER 2 -->
+        <div class="team-card">
+            <span class="badge">Designer</span>
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=300&q=80" alt="Cleo" class="profile-img">
+            <h2 class="member-name">Cleo</h2>
+            <p class="member-role">Web Designer</p>
+            <p>Cleo handles all the visual designs and layouts. She has a great eye for color schemes and makes sure our websites look clean, modern, and easy to use.</p>
+        </div>
+
+        <!-- MEMBER 3 -->
+        <div class="team-card">
+            <span class="badge">Developer</span>
+            <img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?auto=format&fit=crop&w=300&q=80" alt="Rocco" class="profile-img">
+            <h2 class="member-name">Rocco</h2>
+            <p class="member-role">Front-End Developer</p>
+            <p>Rocco turns designs into code! He works daily with HTML, CSS, and JavaScript to build fast and user-friendly web pages for our organization.</p>
+        </div>
+
+        <!-- MEMBER 4 -->
+        <div class="team-card">
+            <span class="badge">Support</span>
+            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=300&q=80" alt="Milo" class="profile-img">
+            <h2 class="member-name">Milo</h2>
+            <p class="member-role">Community Manager</p>
+            <p>Milo communicates directly with our users. He handles feedback, manages our social media channels, and makes sure everyone has a great experience with our team.</p>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Team Showcase Web Page. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
